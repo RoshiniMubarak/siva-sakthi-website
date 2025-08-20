@@ -628,11 +628,6 @@ html {
   .nav-links li {
     margin: 10px 0;
   }
-
-  .mobile-menu {
-    display: block;
-    cursor: pointer;
-  }
 }
 
 /* MOBILE MENU STYLES */
