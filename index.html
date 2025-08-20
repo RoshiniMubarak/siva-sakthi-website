@@ -311,4 +311,15 @@
     <!-- WhatsApp Button -->
     <a href="https://wa.me/9448704494" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 </body>
+    <script>
+const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  // Animate hamburger lines
+  mobileMenu.classList.toggle('open');
+});
+</script>
+
 </html>
