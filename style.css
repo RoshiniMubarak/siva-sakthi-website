@@ -83,20 +83,6 @@ nav {
     width: 100%;
 }
 
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.mobile-menu span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(160, 82, 45, 0.8)), 
@@ -613,48 +599,29 @@ html {
   list-style: none;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px; /* below the header */
-    right: 0;
-    background-color: #fff; /* or your theme */
-    flex-direction: column;
-    width: 200px;
-    display: none; /* hide by default */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .nav-links li {
-    margin: 10px 0;
-  }
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 15px;
 }
 
-/* MOBILE MENU STYLES */
+/* Hamburger hidden on desktop */
 .mobile-menu {
   display: none;
-  flex-direction: column;
-  cursor: pointer;
 }
 
-.mobile-menu span {
-  height: 3px;
-  width: 25px;
-  background: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-/* RESPONSIVE */
-/* Hide nav links on mobile by default */
+/* Mobile view */
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* hidden by default */
     position: absolute;
-    top: 60px; /* adjust according to header height */
+    top: 60px;
     right: 0;
     flex-direction: column;
-    background: #fff;
+    background-color: #fff;
     width: 200px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -669,6 +636,14 @@ html {
     flex-direction: column;
     cursor: pointer;
   }
+
+  .mobile-menu span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
 }
 
 /* Show menu when active */
@@ -676,8 +651,7 @@ html {
   display: flex;
 }
 
-
-/* HAMBURGER ANIMATION */
+/* Optional: animate hamburger to X */
 .mobile-menu.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -687,3 +661,4 @@ html {
 .mobile-menu.open span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
