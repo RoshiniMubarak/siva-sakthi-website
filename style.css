@@ -646,17 +646,18 @@ html {
 }
 
 /* RESPONSIVE */
+/* Hide nav links on mobile by default */
 @media screen and (max-width: 768px) {
   .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #fff;
-    flex-direction: column;
-    width: 200px;
     display: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 60px; /* adjust according to header height */
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    width: 200px;
     padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   .nav-links li {
@@ -665,14 +666,16 @@ html {
 
   .mobile-menu {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
   }
 }
 
-/* ACTIVE MENU */
+/* Show menu when active */
 .nav-links.active {
   display: flex;
-  flex-direction: column;
 }
+
 
 /* HAMBURGER ANIMATION */
 .mobile-menu.open span:nth-child(1) {
